@@ -1,0 +1,166 @@
+:root{
+  --bg:#0b1220;
+  --panel:#0f1724;
+  --accent:#8fbf3f;
+  --muted:#c9d1d9;
+  --logo-font: "Minecraftia", "Press Start 2P", monospace;
+  --block-shadow: 6px 6px 0 rgba(0,0,0,0.6);
+  --btn-bg-top: #c9b07a;
+  --btn-bg-bottom: #8f6b3f;
+}
+
+/* Reset ligero */
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: linear-gradient(180deg, #071018 0%, #0b1220 100%);
+  color:var(--muted);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+/* Header / Logo */
+.site-header{
+  width:100%;
+  padding:28px 16px 8px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+.logo-wrap{
+  text-align:center;
+  user-select:none;
+}
+#logo-svg{
+  width:520px;
+  max-width:90vw;
+  height:auto;
+  filter: drop-shadow(0 6px 0 rgba(0,0,0,0.6));
+}
+.logo-text{
+  font-family: var(--logo-font);
+  font-size:86px;
+  fill:url(#g1);
+  stroke:#2b2b2b;
+  stroke-width:6;
+  paint-order:stroke;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  cursor:text;
+  dominant-baseline:middle;
+}
+.logo-hint{
+  margin-top:6px;
+  font-size:12px;
+  color:#9aa6b2;
+}
+
+/* Main content */
+.content{
+  width:100%;
+  max-width:1100px;
+  padding:18px;
+  display:flex;
+  justify-content:center;
+}
+.hero{
+  width:100%;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border: 2px solid rgba(255,255,255,0.03);
+  padding:22px;
+  border-radius:8px;
+  box-shadow: var(--block-shadow);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:18px;
+}
+
+/* Image card */
+.image-card{
+  position:relative;
+  width:100%;
+  max-width:900px;
+  border:6px solid #2b2b2b;
+  background:linear-gradient(180deg,#e9e0c8,#cdbb8a);
+  box-shadow: 8px 8px 0 rgba(0,0,0,0.6);
+  overflow:hidden;
+}
+.image-card img{
+  display:block;
+  width:100%;
+  height:auto;
+  image-rendering: pixelated;
+}
+.btn-small{
+  position:absolute;
+  right:10px;
+  bottom:10px;
+  background:linear-gradient(180deg,var(--btn-bg-top),var(--btn-bg-bottom));
+  color:#1b1206;
+  padding:8px 12px;
+  border:3px solid #2b2b2b;
+  font-weight:700;
+  text-decoration:none;
+  cursor:pointer;
+  box-shadow: 4px 4px 0 rgba(0,0,0,0.6);
+  font-family:var(--logo-font);
+}
+
+/* Editable text block */
+.text-block{
+  width:100%;
+  max-width:900px;
+  min-height:80px;
+  padding:14px;
+  background:rgba(0,0,0,0.25);
+  border:2px solid rgba(255,255,255,0.03);
+  border-radius:6px;
+  color:var(--muted);
+  font-size:18px;
+  line-height:1.4;
+  outline:none;
+}
+
+/* Buttons estilo Minecraft */
+.buttons-row{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  justify-content:center;
+  width:100%;
+}
+.btn{
+  display:inline-block;
+  text-decoration:none;
+  color:#1b1206;
+  font-weight:800;
+  padding:14px 22px;
+  border:6px solid #2b2b2b;
+  background:linear-gradient(180deg,#f3e6c2,#caa86f);
+  box-shadow: 8px 8px 0 rgba(0,0,0,0.6);
+  font-family:var(--logo-font);
+  text-transform:uppercase;
+  letter-spacing:1px;
+  transition: transform .08s ease;
+}
+.btn:active{ transform: translate(4px,4px); box-shadow: 4px 4px 0 rgba(0,0,0,0.6); }
+.btn-block{ min-width:180px; text-align:center; }
+
+/* Footer */
+.site-footer{
+  margin:22px 0 40px;
+  color:#8f9aa6;
+}
+
+/* Responsive */
+@media (max-width:640px){
+  .logo-text{ font-size:44px; }
+  .btn{ padding:10px 14px; font-size:13px; }
+  .image-card{ border-width:4px; }
+}

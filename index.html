@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Minecraft - Erdtree World</title>
+  <link rel="stylesheet" href="css\style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <!-- Logo SVG editable: cambia el texto dentro de <text> o usa el editor en la página -->
+    <div class="logo-wrap">
+      <svg id="logo-svg" viewBox="0 0 800 160" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Logo">
+        <defs>
+          <linearGradient id="g1" x1="0" x2="0" y1="0" y2="1">
+            <stop offset="0" stop-color="#f6f6f6"/>
+            <stop offset="1" stop-color="#d6d6d6"/>
+          </linearGradient>
+        </defs>
+        <rect width="100%" height="100%" fill="transparent"/>
+        <text id="logo-text" x="50%" y="60%" text-anchor="middle" dominant-baseline="middle"
+              class="logo-text" contenteditable="true" spellcheck="false">Minecraft Diario de Erdtree</text>
+      </svg>
+    </div>
+  </header>
+
+  <main class="content">
+    <section class="hero">
+      <div class="image-card">
+        <img id="random-image" alt="Imagen Intro" src="images\main_menu.png" />
+      </div>
+
+      <div class="text-block" id="main-text" contenteditable="true" spellcheck="false">
+        <p>Aqui se aloja toda la informacion del diario personal de nuestro mundo Erdtree</p>
+      </div>
+
+      <div class="buttons-row">
+        <a class="btn btn-block" href="pages\bluemap\index.html" data-target="https://example.com" id="btn-1">Abrir mapa</a>
+        <a class="btn btn-block" href="#" data-target="https://example.com" id="btn-2">Entrada del diario</a>
+        <a class="btn btn-block" href="#" data-target="https://example.com" id="btn-3">Galería</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <small>© <span id="year"></span> Mi Diario</small>
+  </footer>
+
+  <script src="js\script.js"></script>
+</body>
+</html>
